@@ -3,7 +3,9 @@ import pandas as pd
 import pickle
 import streamlit as st
 # loading the saved model
-loaded_model=pickle.load(open('C:/Users/HP/OneDrive/Documents/D folder/ML tasks/trained_model.sav','rb'))
+import os
+model_path = os.path.join(os.path.dirname(__file__), "trained_model.sav")
+loaded_model = pickle.load(open(model_path, "rb"))
 # creatinga function for prediction
 def rock_mine_pred(input_data):
     #changing the input data to a numpy array
