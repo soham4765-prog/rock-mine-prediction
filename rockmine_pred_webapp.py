@@ -60,3 +60,5 @@ def main():
         st.error(
             f"Invalid CSV! Expected 60 or 61 columns, but found {data.shape[1]} columns."
         )
+if __name__ == "__main__":
+    main()
